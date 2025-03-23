@@ -1,0 +1,40 @@
+<div class="cart-container">
+  <h2>Your Cart</h2>
+
+  <!-- Check if cartItems are available -->
+  <div *ngIf="cartItems.length; else emptyCart" class="cart-items">
+    <div *ngFor="let item of cartItems" class="cart-item-card">
+      <img [src]="item.image" alt="{{ item.name }}" class="cart-item-image" />
+      <div class="cart-item-details">
+        <h4>{{ item.name }}</h4>
+        <p>₹{{ item.price | number }}</p>
+        
+        <!-- Quantity Control Section -->
+        <div class="quantity-control">
+          <button (click)="updateQuantity(item, item.quantity - 1)" [disabled]="item.quantity <= 1">-</button>
+          <input type="number" [(ngModel)]="item.quantity" [readonly]="true" class="quantity-input" />
+          <button (click)="updateQuantity(item, item.quantity + 1)">+</button>
+        </div>
+
+        <!-- Remove Item Button -->
+        <button class="remove-btn" (click)="removeItem(item)">Remove</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Empty Cart Message -->
+  <ng-template #emptyCart>
+    <p class="empty-cart-message">Your cart is empty.</p>
+  </ng-template>
+
+  <!-- Cart Footer: Total Price and Checkout -->
+  <div *ngIf="cartItems.length" class="cart-footer">
+    <h3>Total Price: ₹{{ totalPrice | number }}</h3>
+    <p>Delivery Charge: ₹{{ deliveryCharge | number }}</p>
+    <h3>Total with Delivery: ₹{{ calculateTotalWithDelivery() | number }}</h3>
+    <div class="footer-buttons">
+      <button class="clear-cart-btn" (click)="clearCart()">Clear Cart</button>
+      <button class="checkout-btn" (click)="proceedToCheckout()">Proceed to Checkout</button>
+    </div>
+  </div>
+</div>

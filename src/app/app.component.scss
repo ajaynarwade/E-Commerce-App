@@ -1,0 +1,97 @@
+/* General styling for products */
+.products-grid {
+  display: flex;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid */
+  gap: 10px;
+  padding: 0px;
+}
+
+.products-grid img {
+  width: 100%; /* Full width to maintain responsiveness */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensures image covers the area of the container */
+  border-radius: 8px; /* Optional: for rounded corners */
+}
+
+/* Centering text in section headers */
+h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+.featured-products{
+  background-color: #f1f4f9;
+}
+
+/* Specific Section Styling */
+.shop-categories h2,
+.featured-categories h2,
+.featured-products h2 {
+  margin-top: 0;
+}
+
+// .shop-categories{
+//   padding: 0px 240px 0px 280px;
+// }
+/* Mobile Devices (< 600px) */
+
+
+@media (max-width: 600px) {
+  .products-grid {
+    grid-template-columns: 1fr; /* Single column for mobile */
+    padding: 0px; /* Reduce padding on smaller screens */
+    flex-wrap: wrap;
+  }
+
+  .products-grid img {
+    width: 100%; /* Images take up the full width of the container */
+  }
+
+  h2 {
+    font-size: 1.2em; /* Smaller font size for headers */
+  }
+}
+
+/* Tablets (< 768px) */
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Two columns for tablets */
+    flex-wrap: wrap;
+  }
+
+  h2 {
+    font-size: 1.5em; /* Slightly larger font size */
+  }
+}
+
+/* Small Laptops and Portrait Mode Tablets (<= 1024px) */
+@media (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr); /* Three columns for small laptops */
+    
+  }
+
+  h2 {
+    font-size: 1.75em; /* Larger font size for medium screens */
+  }
+}
+
+/* Laptops and Desktops (> 1024px) */
+@media (min-width: 1025px) {
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr); /* Four columns for larger screens */
+    
+  }
+
+  h2 {
+    font-size: 2em; /* Larger font size for headers */
+  }
+}
+
+/* Footer Section */
+app-footer {
+  margin-top: 20px;
+  text-align: center;
+ //  padding: 20px;
+ background-color: #f8f8f8;
+  border-top: 1px solid #e7e7e7;
+}

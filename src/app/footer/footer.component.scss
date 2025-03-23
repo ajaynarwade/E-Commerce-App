@@ -1,0 +1,141 @@
+/* Footer Styling */
+footer {
+  margin-left: -100px;
+  background: linear-gradient(90deg, rgba(209, 229, 164, 0.5) 0%, rgba(255, 221, 102, 0.5) 100%);
+  padding: 20px 20px;
+  font-family: "Arial", sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-left: 100px;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.footer-col {
+  width: 20%;
+  margin-bottom: 20px;
+}
+
+
+.logo-section p {
+  width:300px;
+  text-align: left;
+  line-height: 18px;
+font-size: 12px;
+margin-right: 0px;
+  margin-left: 0px; /* Ensure there's no left margin pushing the text */
+  padding-left: 0px; /* Ensure there's no padding on the left side */
+}
+
+
+.footer-logo {
+  width: 200px;
+  height: 100px;
+  margin-left: 0px;
+  margin-bottom: 20px;
+}
+
+
+.footer-col h5 {
+  font-weight: 300;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.footer-col ul li a {
+  color: #000;
+  text-decoration: none;
+}
+
+.footer-col ul li a:hover {
+  text-decoration: underline;
+}
+
+.store-links {
+  margin-top: 10px;
+  display: flex;
+}
+
+.store-icon {
+  // margin-left: 43px;
+  // width: 120px;
+  margin-right: -65px;
+  padding-left: -29px;
+  margin-left: 70px;
+  width: 110px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-copyright {
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 10px;
+  color: #555;
+}
+
+.footer-copyright a {
+  color: #000;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-copyright a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+
+  .footer-col-logo-section{
+    img{
+      margin-left: 0px;
+      padding-left: 0px;
+    }
+    p{
+      margin-left: 0px;
+      padding-left: 0px;
+    }
+  }
+  .footer-row {
+    flex-direction: column;
+    margin-left: 0px;
+    padding-left: 0px;
+    
+  }
+
+  .footer-col {
+    width: 100%;
+  }
+
+  .logo-section {
+    width: 100%;
+  }
+}
+

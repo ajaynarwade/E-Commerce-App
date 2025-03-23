@@ -1,0 +1,49 @@
+// .divider:after,
+// .divider:before {
+// content: "";
+// flex: 1;
+// height: 1px;
+// background: #eee;
+// }
+// width: 75%;
+.custom-heading {
+  text-align: center;
+  margin-bottom: 1.5rem; // Optional: adjust bottom margin if necessary
+}
+
+/* Default background styling for larger screens */
+.custom-background {
+  background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg');
+  background-size: cover;
+  background-position: center;
+}
+.fullBody{
+  background-color: #e3eef8;
+  margin-bottom: -100px;
+}
+
+/* Mobile Specific Styling (for phone sizes) */
+@media (max-width: 767px) {
+  .image {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    // width: 60%;
+    height: 140px; /* Set the height of the image lower on mobile */
+    margin-bottom: 15px;
+  }
+
+  .custom-background {
+    opacity: 0.8;  /* Lower the opacity on mobile screens */
+  }
+
+  .container {
+  width:75%;
+
+    height: 90%;
+    position: relative; /* Ensures content stays on top of the background image */
+    z-index: 1;
+  }
+  
+}
+

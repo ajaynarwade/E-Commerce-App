@@ -1,0 +1,188 @@
+/* Ensures the image section spans the full browser width */
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    
+}
+
+/* Full width image styling */
+.image-container img {
+    width: 100%;
+  height: 480px;
+    display: block;
+   
+}
+
+/* Overlay text and button */
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #6B8E23; /* Green color matching the text */
+    text-align: center;
+}
+
+/* Styling for text */
+.overlay h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Styling for button */
+.overlay .btn {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.75em 1.5em;
+    font-size: 1em;
+    color: #6B8E23; /* Green color */
+    background-color: transparent;
+    border: 1px solid #6B8E23;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.overlay .btn:hover {
+    background-color: #6B8E23;
+    color: white;
+}
+
+/* Info section styles */
+.info-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: #d8d87f;
+}
+
+.info-item {
+    flex: 1;
+    max-width: 200px;
+    text-align: center;
+}
+
+.info-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    font-size: 0.9em;
+    color: #666;
+    margin: 0;
+}
+
+.odd {
+    color: green;
+}
+
+.even {
+    color: orange;
+}
+
+/* Responsive Design - Mobile Devices */
+@media (max-width: 767px) {
+    .image-container img {
+      
+        height: 25vh; /* Adjust image height on small devices */
+    }
+
+    .overlay h1 {
+        font-size: 2em; /* Smaller title font size */
+    }
+
+    .overlay .btn {
+        padding: 0.5em 1em;
+        font-size: 0.9em; /* Smaller button text */
+    }
+
+    .info-container {
+        flex-direction: column; /* Stack info items vertically */
+        align-items: stretch; /* Make items take full width */
+    }
+
+    .info-item {
+        max-width: 100%; /* Full width for each info item on small screens */
+        margin-bottom: 15px; /* Space between stacked items */
+    }
+}
+
+/* Responsive Design - Tablets (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .image-container img {
+        height: 50vh; /* Adjust image height for tablets */
+    }
+
+    .overlay h1 {
+        font-size: 2.5em; /* Adjust title size for tablets */
+    }
+
+    .overlay .btn {
+        padding: 0.65em 1.2em;
+        font-size: 1em; /* Adjust button text for tablets */
+    }
+
+    .info-container {
+        flex-wrap: wrap; /* Ensure wrapping on tablets */
+        justify-content: center; /* Center items */
+    }
+
+    .info-item {
+        max-width: 220px; /* Adjust max width for each item */
+    }
+}
+
+
+// @media (min-width: 1025px) and (max-width: 1440px) {
+//     .image-container img {
+//         height: 50vh; 
+//     }
+
+//     .overlay h1 {
+//         font-size: 3em; 
+//     }
+
+//     .overlay .btn {
+//         padding: 0.75em 1.5em;
+//         font-size: 1em;
+//     }
+
+//     .info-container {
+//         justify-content: space-between; 
+//     }
+
+//     .info-item {
+//         max-width: 250px; 
+//     }
+// }
+
+/* Responsive Design - Desktops (1441px and above) */
+@media (min-width: 1441px) {
+    .image-container img {
+        height: 50vh; /* Consistent image height on desktop */
+    }
+
+    .overlay h1 {
+        font-size: 3.5em; /* Title size for large screens */
+    }
+
+    .overlay .btn {
+        padding: 1em 2em; /* Larger button size */
+        font-size: 1.1em;
+    }
+
+    .info-container {
+        justify-content: space-between; /* Evenly distribute items */
+    }
+
+    .info-item {
+        max-width: 300px; /* Wider info items on desktop */
+    }
+}

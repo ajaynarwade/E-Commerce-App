@@ -1,0 +1,26 @@
+<div class="categories-container">
+  <div class="h1-container">
+    <h1>Categories</h1>
+  </div>
+  <div class="categories">
+    <div class="category1">
+      <a [routerLink]="['/food']" [queryParams]="{ section: 'vegetables' }">
+        <img src="./assets/vegetables.webp" alt="Vegetables" />
+      </a>
+      <h4>Vegetables</h4>
+    </div>
+    <div class="category2">
+      <a [routerLink]="['/food']" [queryParams]="{ section: 'fruits' }">
+        <img src="./assets/fruits.webp" alt="Fruits" />
+      </a>
+      <h4>Fruits</h4>
+    </div>
+    <div class="category3">
+      <a [routerLink]="['/food']" [queryParams]="{ section: 'exoticVegetables' }">
+        <img src="./assets/exoticvegetables.webp" alt="Exotic Vegetables" />
+      </a>
+      <h4>Exotic Vegetables</h4>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,57 @@
+@import 'bootstrap/scss/bootstrap';
+@import 'font-awesome/scss/font-awesome';
+// @import '~swiper/swiper-bundle.min.css';
+
+body {
+  font-family: 'Arial', sans-serif;
+ // background-color: #a4de85;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 10px;
+
+  .logo {
+    width: 100px;
+  }
+
+  ul {
+    list-style-type: none;
+    display: flex;
+
+    li {
+      margin-right: 20px;
+
+      a {
+        padding: 20px;
+        text-decoration: none;
+        color: #333;
+      }
+    }
+  }
+}
+
+.shop-categories {
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.featured-products {
+  padding: 20px;
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+}
+
+html, body { height: 100%; }
+body { 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+overflow-x: hidden;
+}

@@ -1,0 +1,32 @@
+<app-header></app-header> <!-- Always visible -->
+
+<div *ngIf="showFullContent">
+  <app-banner></app-banner>
+
+  <section class="shop-categories">
+  
+    <app-category-section></app-category-section>
+  </section>
+
+  <section class="featured-categories">
+    <img src="./assets/offer_banner.webp" alt="" style="width: 100%;">
+    <app-featuredcategories></app-featuredcategories>
+  </section>
+
+  <section class="latest-rentals">
+    <app-rentals></app-rentals> 
+    
+  </section>
+
+  <section class="featured-products">
+   
+    <div class="products-grid">
+      <app-product-card ></app-product-card>
+    </div>
+  </section>
+  <!-- <app-upload></app-upload> -->
+</div>
+<app-footer></app-footer>
+
+<!-- Always show the routed content -->
+<router-outlet></router-outlet>

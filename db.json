@@ -1,0 +1,9 @@
+{
+    "customers": [
+      { "id": 1, "name": "John", "email": "john@example.com" },
+      { "id": 2, "name": "swati", "email": "swati@example.com" },
+      { "id": 3, "name": "neha", "email": "neha@example.com" },
+      { "id": 4, "name": "shiv", "email": "shiv@example.com" },
+      { "id": 5, "name": "abc", "email": "abcjohn@example.com" }
+    ]
+  }

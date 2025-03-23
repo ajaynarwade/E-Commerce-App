@@ -1,0 +1,103 @@
+<div class="main-container">
+  <!-- Left section for categories -->
+  <div class="categories-container">
+    <div class="h1-container">
+      <h2>Categories</h2>
+    </div>
+    <div class="categories">
+      <div class="category1">
+        <img (click)="toggleSection('vegetables')" src="./assets/vegetables.webp" alt="vegetable img" />
+        <h4>Vegetables</h4>
+      </div>
+      <div class="category2">
+        <img (click)="toggleSection('fruits')" src="./assets/fruits.webp" alt="Fruits img" />
+        <h4>Fruits</h4>
+      </div>
+      <div class="category3">
+        <img (click)="toggleSection('exoticVegetables')" src="./assets/exoticvegetables.webp" alt="Exotic Vegetables img" />
+        <h4>Exotic Vegetables</h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right section for vegetable categories -->
+  <div class="featured-categories" *ngIf="activeSection == 'vegetables'">
+    <h4>Vegetables</h4>
+    <div class="categories-container">
+      <div class="category-item" *ngFor="let category of vegetableCategories">
+        <div class="discount-badge">{{ category.discount }}</div>
+        <div class="icon">
+          <img [src]="category.imageUrl" alt="category.icon">
+        </div>
+        <!-- <p class="category-name">{{ category.name }}</p> -->
+        <p class="category-name product-card-title card-title mb-0">
+          {{ category.name }}
+        </p>
+        <p class="price">
+          Price: {{ category.price }} / Kg
+          <span class="old-price">{{ category.oldPrice }}</span>
+        </p>
+        <select class="select-quantity">
+          <option>Select Quantity</option>
+          <option>500 gm</option>
+          <option>1 Kg</option>
+        </select>
+        <button class="add-to-cart" (click)="addToCart(category)">Add To Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right section for fruits categories -->
+  <div class="featured-categories" *ngIf="activeSection == 'fruits'">
+    <h4>Fruits</h4>
+    <div class="categories-container">
+      <div class="category-item" *ngFor="let category of fruitCategories">
+        <div class="discount-badge">{{ category.discount }}</div>
+        <div class="icon">
+          <img [src]="category.imageUrl" alt="{{ category.name }}" />
+        </div>
+        <!-- <p class="category-name">{{ category.name }}</p> -->
+        <p class="category-name product-card-title card-title mb-0">
+          {{ category.name }}
+        </p>
+        <p class="price">
+          Price: {{ category.price }} / Kg
+          <span class="old-price">{{ category.oldPrice }}</span>
+        </p>
+        <select class="select-quantity">
+          <option>Select Quantity</option>
+          <option>500 gm</option>
+          <option>1 Kg</option>
+        </select>
+        <button class="add-to-cart" (click)="addToCart(category)">Add To Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right section for exotic vegetables categories -->
+  <div class="featured-categories" *ngIf="activeSection == 'exoticVegetables'">
+    <h4>Exotic Vegetables</h4>
+    <div class="categories-container">
+      <div class="category-item" *ngFor="let category of exoticVegetableCategories">
+        <div class="discount-badge">{{ category.discount }}</div>
+        <div class="icon">
+          <img [src]="category.imageUrl" alt="{{ category.name }}" />
+        </div>
+        <!-- <p class="category-name">{{ category.name }}</p> -->
+        <p class="category-name product-card-title card-title mb-0">
+          {{ category.name }}
+        </p>
+        <p class="price">
+          Price: {{ category.price }} / Kg
+          <span class="old-price">{{ category.oldPrice }}</span>
+        </p>
+        <select class="select-quantity">
+          <option>Select Quantity</option>
+          <option>500 gm</option>
+          <option>1 Kg</option>
+        </select>
+        <button class="add-to-cart" (click)="addToCart(category)">Add To Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
