@@ -18,7 +18,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { HammerModule } from '@angular/platform-browser';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { FeaturedcategoriesComponent } from './featuredcategories/featuredcategories.component';
+import { TodaysDealComponent  } from './todaysDeal/todaysDeal';
 import { FormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { RouterModule } from '@angular/router';
@@ -39,7 +39,7 @@ import { UploadComponent } from './upload/upload.component';
     FooterComponent,
     CartComponent,
     FoodComponent,
-    FeaturedcategoriesComponent,
+    TodaysDealComponent ,
     UploadComponent,
   ],
   imports: [

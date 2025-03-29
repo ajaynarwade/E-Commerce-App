@@ -1,4 +1,4 @@
-.featured-categories {
+.todaysDeal {
     background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
     text-align: center;
     padding: 20px 0;
@@ -6,19 +6,19 @@
     font-family: 'Arial', sans-serif;
 }
 
-.featured-categories .title {
+.todaysDeal .title {
     color: #fff;
     font-size: 2rem;
     margin-bottom: 5px;
 }
 
-.featured-categories h4,
-.featured-categories h5 {
+.todaysDeal h4,
+.todaysDeal h5 {
     color: white;
     margin: 5px 0;
 }
 
-.featured-categories .categories-container {
+.todaysDeal .categories-container {
     display: flex;
     gap: 20px;
     padding: 20px;
@@ -28,21 +28,21 @@
     -ms-overflow-style: none;
 }
 
-.featured-categories .categories-container::-webkit-scrollbar {
+.todaysDeal .categories-container::-webkit-scrollbar {
     height: 6px;
     background: #f1f1f1;
 }
 
-.featured-categories .categories-container::-webkit-scrollbar-thumb {
+.todaysDeal .categories-container::-webkit-scrollbar-thumb {
     background: #888;
     border-radius: 10px;
 }
 
-.featured-categories .categories-container::-webkit-scrollbar-thumb:hover {
+.todaysDeal .categories-container::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
 
-.featured-categories .category-item {
+.todaysDeal .category-item {
     background: #fff;
     border-radius: 10px;
     width: 250px;
@@ -56,7 +56,7 @@
     justify-content: space-between;
 }
 
-.featured-categories .discount-badge {
+.todaysDeal .discount-badge {
     background: #6bc207;
     color: white;
     padding: 5px 10px;
@@ -65,7 +65,7 @@
     margin-bottom: 10px;
 }
 
-.featured-categories .icon {
+.todaysDeal .icon {
     width: 100%;
     height: 120px;
     border-radius: 10px;
@@ -76,31 +76,31 @@
     margin-bottom: 10px;
 }
 
-.featured-categories .icon img {
+.todaysDeal .icon img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.featured-categories .category-name {
+.todaysDeal .category-name {
     font-size: 1rem;
     font-weight: bold;
     margin: 10px 0 5px 0;
     color: #333;
 }
 
-.featured-categories .price {
+.todaysDeal .price {
     font-size: 0.9rem;
     color: #555;
     margin-bottom: 10px;
 }
 
-.featured-categories .old-price {
+.todaysDeal .old-price {
     text-decoration: line-through;
     color: red;
 }
 
-.featured-categories .select-quantity {
+.todaysDeal .select-quantity {
     padding: 5px;
     margin-bottom: 10px;
     width: 100%;
@@ -109,7 +109,7 @@
     color: #6bc207;
 }
 
-.featured-categories .add-to-cart {
+.todaysDeal .add-to-cart {
     background: #6bc207;
     color: white;
     padding: 10px;
@@ -119,84 +119,77 @@
     cursor: pointer;
 }
 
-.featured-categories .add-to-cart:hover {
+.todaysDeal .add-to-cart:hover {
     background: #45a049;
 }
 
-/* Media Queries for Responsiveness */
+/* Bootstrap Responsive Support */
 @media (max-width: 768px) {
-    .featured-categories .title {
-        font-size: 1.8rem; /* Slightly smaller for tablets */
+    .todaysDeal .title {
+        font-size: 1.8rem;
     }
 
-    .featured-categories .categories-container {
+    .todaysDeal .categories-container {
         gap: 10px;
         padding: 15px;
-        overflow-x: auto; /* Allow horizontal scrolling */
+        overflow-x: auto;
         white-space: nowrap;
     }
 
-    .featured-categories .category-item {
-        width: 45%; /* Show two items at a time */
+    .todaysDeal .category-item {
+        width: 45%;
         height: auto;
         padding: 10px;
     }
 
-    .featured-categories .icon {
+    .todaysDeal .icon {
         height: 100px;
     }
 
-    .featured-categories .category-name {
+    .todaysDeal .category-name {
         font-size: 0.9rem;
     }
 
-    .featured-categories .price {
+    .todaysDeal .price {
         font-size: 0.8rem;
     }
 
-    .featured-categories .add-to-cart {
+    .todaysDeal .add-to-cart {
         font-size: 0.9rem;
         padding: 8px;
     }
 }
 
 @media (max-width: 480px) {
-    .featured-categories {
-        background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
-        text-align: center;
-        padding: 20px 0;
-        overflow: hidden;
-        font-family: 'Arial', sans-serif;
-    }
-    .featured-categories .title {
-        font-size: 1.5rem; /* Smaller font size for phones */
+    .todaysDeal .title {
+        font-size: 1.5rem;
     }
 
-    .featured-categories .categories-container {
+    .todaysDeal .categories-container {
         gap: 8px;
         padding: 10px;
-        width:450px;
+        width: 450px;
         height: 350px;
     }
 
-    .featured-categories .category-item {
-        width: 45%; /* Maintain two items on small phones */
+    .todaysDeal .category-item {
+        width: 45%;
         padding: 8px;
     }
 
-    .featured-categories .icon {
+    .todaysDeal .icon {
         height: 80px;
     }
 
-    .featured-categories .category-name {
+    .todaysDeal .category-name {
         font-size: 0.8rem;
     }
 
-    .featured-categories .price {
+    .todaysDeal .price {
         font-size: 0.7rem;
     }
 
-    .featured-categories .add-to-cart {
+    .todaysDeal .add-to-cart {
         font-size: 0.8rem;
         padding: 6px;
     }
