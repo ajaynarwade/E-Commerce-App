@@ -12,7 +12,7 @@ export class HeaderComponent {
   menuOpen: boolean = false; // Tracks the state of the hamburger menu
 
   constructor(private cartService: CartService,
-    private Router:Router,
+    private router:Router,
   ) {
     // Subscribe to cart updates and update the cart count
     this.cartService.getCartItems().subscribe(items => {
@@ -24,9 +24,9 @@ export class HeaderComponent {
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
   }
-  goToUpload() {
-    this.Router.navigate(['/upload']);
-  }
+  // goToUpload() {
+  //   this.Router.navigate(['/upload']);
+  // }
 
   // Close the menu
   closeMenu(): void {
@@ -41,5 +41,8 @@ export class HeaderComponent {
     if (!clickedInsideMenu && !clickedHamburger) {
       this.menuOpen = false; // Close the menu if clicked outside
     }
+  }
+  navigateToLogin() {
+    this.router.navigate(['/login']);
   }
 }

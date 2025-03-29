@@ -1,195 +1,77 @@
-<div class="vh-100 fullBody">
-  <section class="vh-90 body">
-    <div class="container py-5 h-100">
-      <div class="row d-flex align-items-center justify-content-center h-100">
-        <div class="col-md-8 col-lg-7 col-xl-6">
-          <img
-            src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
-            class="img-fluid image"
-            alt="Illustration"
-          />
-        </div>
-        <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-          <!-- Login Form -->
-          <form *ngIf="!isRegisterMode" [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
-            <h3 class="mb-4 custom-heading">Login</h3>
+<div class="vh-100 fullBody d-flex align-items-center">
+  <section class="container py-4">
+    <div class="row d-flex align-items-center justify-content-center">
+      
+      <!-- Image Section -->
+      <div class="col-md-6 d-flex justify-content-center">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+             class="img-fluid image" alt="Illustration">
+      </div>
 
-            <!-- Email -->
-            <div class="form-outline mb-4">
-              <label class="form-label" for="loginEmail">Email</label>
-              <input
-                type="email"
-                id="loginEmail"
-                class="form-control"
-                formControlName="email"
-              />
-              <small
-                *ngIf="loginForm.get('email')?.hasError('required') && loginForm.get('email')?.touched"
-                class="text-danger"
-              >
-                Email is required.
-              </small>
-              <small
-                *ngIf="loginForm.get('email')?.hasError('email') && loginForm.get('email')?.touched"
-                class="text-danger"
-              >
-                Invalid email format.
-              </small>
-            </div>
+      <!-- Authentication Form -->
+      <div class="col-md-6 p-4">
+        
+        <!-- Login Form -->
+        <form *ngIf="!isRegisterMode" [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()" class="card shadow p-4">
+          <h3 class="mb-4 text-center text-success">Login</h3>
 
-            <!-- Password -->
-            <div class="form-outline mb-4">
-              <label class="form-label" for="loginPassword">Password</label>
-              <input
-                type="password"
-                id="loginPassword"
-                class="form-control"
-                formControlName="password"
-              />
-              <small
-                *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched"
-                class="text-danger"
-              >
-                Password is required.
-              </small>
-              <small
-                *ngIf="loginForm.get('password')?.hasError('minlength') && loginForm.get('password')?.touched"
-                class="text-danger"
-              >
-                Password must be at least 8 characters long.
-              </small>
-              <small
-                *ngIf="loginForm.get('password')?.hasError('pattern') && loginForm.get('password')?.touched"
-                class="text-danger"
-              >
-                Password must include uppercase, lowercase, number, and special character.
-              </small>
-            </div>
+          <div class="form-outline mb-3">
+            <label class="form-label" for="loginEmail">Email</label>
+            <input type="email" id="loginEmail" class="form-control" formControlName="email">
+            <small *ngIf="loginForm.get('email')?.hasError('required') && loginForm.get('email')?.touched"
+                   class="text-danger">Email is required.</small>
+            <small *ngIf="loginForm.get('email')?.hasError('email') && loginForm.get('email')?.touched"
+                   class="text-danger">Invalid email format.</small>
+          </div>
 
-            <button type="submit" class="btn btn-primary btn-block" [disabled]="loginForm.invalid">
-              Sign in
-            </button>
+          <div class="form-outline mb-3">
+            <label class="form-label" for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" class="form-control" formControlName="password">
+            <small *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched"
+                   class="text-danger">Password is required.</small>
+            <small *ngIf="loginForm.get('password')?.hasError('minlength') && loginForm.get('password')?.touched"
+                   class="text-danger">Password must be at least 8 characters.</small>
+          </div>
 
-            <div class="text-center mt-3">
-              <a href="javascript:void(0)" (click)="toggleMode()">Don't have an account? Register</a>
-            </div>
-          </form>
+          <button type="submit" class="btn btn-success w-100" [disabled]="loginForm.invalid">Sign in</button>
 
-          <!-- Register Form -->
-          <form *ngIf="isRegisterMode" [formGroup]="registerForm" (ngSubmit)="onRegisterSubmit()">
-            <h3 class="mb-4">Register</h3>
+          <div class="text-center mt-3">
+            <a href="javascript:void(0)" (click)="toggleMode()" class="text-success">Don't have an account? Register</a>
+          </div>
+        </form>
 
-            <!-- Name -->
-            <div class="form-outline mb-4">
-              <label class="form-label" for="registerName">Name</label>
-              <input
-                type="text"
-                id="registerName"
-                class="form-control"
-                formControlName="name"
-              />
-              <small
-                *ngIf="registerForm.get('name')?.hasError('required') && registerForm.get('name')?.touched"
-                class="text-danger"
-              >
-                Name is required.
-              </small>
-              <small
-                 *ngIf="registerForm.get('name')?.hasError('pattern') &&registerForm.get('name')?.touched"
-                 class="text-danger"
-              >
-                Name can only contain alphabets and spaces.
-              </small>
-              <small
-                *ngIf="registerForm.get('name')?.hasError('minlength') && registerForm.get('name')?.touched"
-                class="text-danger"
-              >
-                Name must be at least 5 characters long.
-              </small>
-            </div>
+        <!-- Register Form -->
+        <form *ngIf="isRegisterMode" [formGroup]="registerForm" (ngSubmit)="onRegisterSubmit()" class="card shadow p-4">
+          <h3 class="mb-4 text-center text-success">Register</h3>
 
-            <!-- Email -->
-            <div class="form-outline mb-4">
-              <label class="form-label" for="registerEmail">Email</label>
-              <input
-                type="email"
-                id="registerEmail"
-                class="form-control"
-                formControlName="email"
-              />
-              <small
-                *ngIf="registerForm.get('email')?.hasError('required') && registerForm.get('email')?.touched"
-                class="text-danger"
-              >
-                Email is required.
-              </small>
-              <small
-                *ngIf="registerForm.get('email')?.hasError('email') && registerForm.get('email')?.touched"
-                class="text-danger"
-              >
-                Invalid email format.
-              </small>
-            </div>
+          <div class="form-outline mb-3">
+            <label class="form-label" for="registerName">Name</label>
+            <input type="text" id="registerName" class="form-control" formControlName="name">
+            <small *ngIf="registerForm.get('name')?.hasError('required') && registerForm.get('name')?.touched"
+                   class="text-danger">Name is required.</small>
+          </div>
 
-            <!-- Password -->
-            <div class="form-outline mb-4">
-              <label class="form-label" for="registerPassword">Password</label>
-              <input
-                type="password"
-                id="registerPassword"
-                class="form-control"
-                formControlName="password"
-              />
-              <small
-                *ngIf="registerForm.get('password')?.hasError('required') && registerForm.get('password')?.touched"
-                class="text-danger"
-              >
-                Password is required.
-              </small>
-              <small
-                *ngIf="registerForm.get('password')?.hasError('minlength') && registerForm.get('password')?.touched"
-                class="text-danger"
-              >
-                Password must be at least 8 characters long.
-              </small>
-              <small
-                *ngIf="registerForm.get('password')?.hasError('pattern') && registerForm.get('password')?.touched"
-                class="text-danger"
-              >
-                Password must include uppercase, lowercase, number, and special character.
-              </small>
-            </div>
+          <div class="form-outline mb-3">
+            <label class="form-label" for="registerEmail">Email</label>
+            <input type="email" id="registerEmail" class="form-control" formControlName="email">
+            <small *ngIf="registerForm.get('email')?.hasError('required') && registerForm.get('email')?.touched"
+                   class="text-danger">Email is required.</small>
+          </div>
 
-            <!-- Confirm Password -->
-            <div class="form-outline mb-4">
-              <label class="form-label" for="registerConfirmPassword">Confirm Password</label>
-              <input
-                type="password"
-                id="registerConfirmPassword"
-                class="form-control"
-                formControlName="confirmPassword"
-              />
-              <small
-                *ngIf="registerForm.hasError('mismatch') && registerForm.get('confirmPassword')?.touched"
-                class="text-danger"
-              >
-                Passwords do not match.
-              </small>
-            </div>
+          <div class="form-outline mb-3">
+            <label class="form-label" for="registerPassword">Password</label>
+            <input type="password" id="registerPassword" class="form-control" formControlName="password">
+            <small *ngIf="registerForm.get('password')?.hasError('required') && registerForm.get('password')?.touched"
+                   class="text-danger">Password is required.</small>
+          </div>
 
-            <button
-              type="submit"
-              class="btn btn-primary btn-block"
-              [disabled]="registerForm.invalid"
-            >
-              Register
-            </button>
+          <button type="submit" class="btn btn-success w-100" [disabled]="registerForm.invalid">Register</button>
 
-            <div class="text-center mt-3">
-              <a href="javascript:void(0)" (click)="toggleMode()">Already have an account? Login</a>
-            </div>
-          </form>
-        </div>
+          <div class="text-center mt-3">
+            <a href="javascript:void(0)" (click)="toggleMode()" class="text-success">Already have an account? Login</a>
+          </div>
+        </form>
+        
       </div>
     </div>
   </section>

@@ -26,7 +26,9 @@
   </section>
   <!-- <app-upload></app-upload> -->
 </div>
+<div *ngIf="!loginPage">
 <app-footer></app-footer>
+</div>
 
 <!-- Always show the routed content -->
 <router-outlet></router-outlet>

@@ -18,6 +18,7 @@ export class AppComponent implements OnInit {
     { name: 'Handloom saree for womens', price: 499.00, image: 'https://www.indianvillez.com/cdn/shop/collections/1896eece956e38f802f68e71d23febc0.jpg?v=1695821563' },
     { name: 'Handmade Pink flower jewellery ', price: 399, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRprahYheLi_PNUIvJWjLzKL3D1hf8WiDb6zg&s' },
   ];
+  loginPage : boolean =false;
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute,@Inject(PLATFORM_ID) private platformId: Object) {}
 
@@ -45,6 +46,9 @@ export class AppComponent implements OnInit {
         }
         if (isPlatformBrowser(this.platformId)) {
           window.scrollTo(0, 0);
+        }
+        if (this.currentRoute == "/login"){
+          this.loginPage = true;  
         }
         // Scroll to top after navigation
         // window.scrollTo(0, 0);
